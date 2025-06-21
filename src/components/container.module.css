@@ -1,0 +1,10 @@
+.container{
+    position: absolute;
+    background-color: #b8c6e5;
+    padding: 25px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    height: auto;
+    left: 40%;
+    top: 5%;
+}
