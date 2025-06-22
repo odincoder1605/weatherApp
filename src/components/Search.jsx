@@ -5,11 +5,10 @@ import styles from './search.module.css'
 export default function Search({setData,setIsLoading}){
     const [city, setCity] = useState("London");
     const apiKey = import.meta.env.VITE_API_KEY;
-    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
     useEffect(()=>{
         async function fetchWeather(){
-            const res = await fetch(URL);
+            const res = await fetch(import.meta.env.VITE_API_URL + `/weather?q=${city}&appid=${apiKey}`);
             const data = await res.json();
             console.log(data);
             setData(data);
